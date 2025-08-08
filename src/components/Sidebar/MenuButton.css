@@ -1,0 +1,56 @@
+/* MenuButton.css - Yo: "Barrita verde al activo, que no se salga del menú" */
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  background: none;
+  text-align: left;
+  border-radius: 8px;
+  margin: 6px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #575757;
+  font-weight: 500;
+  font-size: 15px;
+  gap: 12px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.menu-button::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  background-color: #57baa6;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.menu-button.active::before {
+  opacity: 1;
+}
+
+.menu-button:hover {
+  background-color: #f0f8f6;
+  color: #57baa6;
+}
+
+.menu-button.active {
+  background-color: #e6f7f2;
+  color: #57baa6;
+  font-weight: 600;
+}
+
+.menu-button i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  color: #57baa6;
+}

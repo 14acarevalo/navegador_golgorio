@@ -1,0 +1,65 @@
+/* UserDropdownModal.css - Yo: "Este modal está bien. Solo lo dejo por completitud." */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.modal {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1100;
+}
+
+.modal-section {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-section:last-child {
+  border-bottom: none;
+}
+
+.modal-section h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #333;
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal li {
+  margin-bottom: 8px;
+}
+
+.modal a,
+.modal button {
+  background: none;
+  border: none;
+  color: #575757;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 6px 0;
+}
+
+.modal button:hover,
+.modal a:hover {
+  color: #57baa6;
+}

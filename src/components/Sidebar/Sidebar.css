@@ -1,0 +1,38 @@
+/* Sidebar.css - Yo: "El sidebar empieza justo debajo del header, no encima." */
+
+.sidebar {
+  position: fixed;
+  top: 60px; /* Justo debajo del header */
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  z-index: 900;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-logo {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sidebar-logo img {
+  width: 160px;
+  height: auto;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 10px 0;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  border-top: 1px solid #eee;
+}
