@@ -1,56 +1,63 @@
 /* MenuButton.css - Yo: "Barrita verde al activo, que no se salga del menú" */
 
+/* Estilo base para el botón del menú lateral, añadido a dicho boton*/
 .menu-button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 12px 15px;
-  border: none;
-  background: none;
-  text-align: left;
-  border-radius: 8px;
-  margin: 6px 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #575757;
-  font-weight: 500;
-  font-size: 15px;
-  gap: 12px;
-  position: relative;
-  padding-left: 28px;
+  display: flex;                 /* Usamos flexbox para alinear icono y texto en línea */
+  align-items: center;           /* Centra verticalmente los elementos dentro del botón */
+  width: 100%;                  /* El botón ocupa todo el ancho disponible */
+  padding: 12px 15px;           /* Espacio interno arriba/abajo y a los lados */
+  padding-left: 28px;           /* Padding extra a la izquierda para dejar espacio a la barra verde */
+  border: none;                 /* Sin borde para apariencia limpia */
+  background: none;             /* Sin fondo por defecto */
+  text-align: left;             /* El texto se alinea a la izquierda */
+  border-radius: 8px;           /* Bordes redondeados para suavidad visual */
+  margin: 6px 10px;             /* Separación externa entre botones */
+  cursor: pointer;              /* Cursor de mano para indicar clickeable */
+  transition: all 0.3s ease;    /* Transiciones suaves para cambios de color y fondo */
+  color: #575757;             /* Color de texto gris oscuro inicial */
+  font-weight: 500;             /* Grosor medio del texto */
+  font-size: 15px;              /* Tamaño legible para texto */
+  gap: 12px;                   /* Separación entre icono y texto */
+  position: relative;          /* Necesario para posicionar la barra verde con pseudo-elemento */
 }
 
+/* Pseudo-elemento para la barra verde lateral que indica el botón activo */
 .menu-button::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 6px;
-  bottom: 6px;
-  width: 4px;
-  background-color: #57baa6;
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 0.2s;
+  content: '';                 /* No tiene contenido visible, es decorativo */
+  position: absolute;          /* Posición absoluta dentro del botón */
+  left: 10px;                  /* Se posiciona a 10px desde la izquierda del botón */
+  top: 6px;                    /* Margen superior para dejar espacio */
+  bottom: 6px;                 /* Margen inferior para dejar espacio */
+  width: 4px;                  /* Grosor fijo de la barra verde */
+  background-color: #57baa6;   /* Color verde característico de Golgorio a respetar siempre, dentro
+                                 de las tonalidades es el que mejor le queda a mi gusto*/
+  border-radius: 2px;          /* Bordes ligeramente redondeados */
+  opacity: 0;                  /* Barra invisible por defecto */
+  transition: opacity 0.2s;    /* Transición suave para aparición/desaparición */
 }
 
+/* Mostrar la barra verde cuando el botón está activo */
 .menu-button.active::before {
-  opacity: 1;
+  opacity: 1;                  /* Barra visible */
 }
 
+/* Estilo para cuando el cursor pasa por encima del botón */
 .menu-button:hover {
-  background-color: #f0f8f6;
-  color: #57baa6;
+  background-color: #f0f8f6;   /* Fondo verde muy claro */
+  color: #57baa6;              /* Texto cambia a verde Golgorio */
 }
 
+/* Estilo para el botón activo */
 .menu-button.active {
-  background-color: #e6f7f2;
-  color: #57baa6;
-  font-weight: 600;
+  background-color: #e6f7f2;   /* Fondo verde claro */
+  color: #57baa6;              /* Texto verde Golgorio*/
+  font-weight: 600;            /* Texto más grueso para destacar */
 }
 
+/* Estilo para el icono dentro del botón */
 .menu-button i {
-  font-size: 18px;
-  width: 24px;
-  text-align: center;
-  color: #57baa6;
+  font-size: 18px;             /* Tamaño del icono */
+  width: 24px;                 /* Ancho fijo para que todos los iconos estén alineados */
+  text-align: center;          /* Centra el icono dentro del espacio asignado */
+  color: #57baa6;              /* Color verde para el icono color verde Golgorio*/
 }

@@ -1,65 +1,74 @@
-/* UserDropdownModal.css - Yo: "Este modal está bien. Solo lo dejo por completitud." */
+/* UserDropdownModal.css - Estilos para el modal desplegable de usuario */
 
+/* Capa de fondo que cubre toda la pantalla cuando el modal está abierto */
 .modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: transparent;
+  position: fixed;         /* Fija la capa en la pantalla, no se mueve al hacer scroll */
+  inset: 0;                /* Equivalente a top:0; right:0; bottom:0; left:0; cubre toda la pantalla */
+  z-index: 1000;           /* Se sitúa por encima de casi todo para tapar contenido detrás */
+  background-color: transparent; /* Fondo transparente para no oscurecer la pantalla, solo para detectar clics */
 }
 
+/* Contenedor principal del modal */
 .modal {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 280px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  border: 1px solid #e0e0e0;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1100;
+  position: absolute;      /* Posición relativa al contenedor padre (modal-overlay) */
+  top: 60px;               /* Aparece justo debajo del header (que tiene altura 60px) */
+  right: 20px;             /* Se sitúa a 20px del borde derecho de la pantalla */
+  width: 280px;            /* Ancho fijo del modal */
+  background: white;       /* Fondo blanco para que destaque */
+  border-radius: 12px;     /* Bordes redondeados para suavizar la apariencia */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidad y separarlo visualmente */
+  border: 1px solid #e0e0e0; /* Borde sutil gris claro */
+  overflow: hidden;        /* Oculta cualquier contenido que sobresalga del contenedor */
+  font-family: 'Poppins', sans-serif; /* Fuente principal legible y moderna */
+  z-index: 1100;           /* Más arriba que el overlay para que esté visible */
 }
 
+/* Cada sección dentro del modal tiene relleno y borde inferior */
 .modal-section {
-  padding: 16px;
-  border-bottom: 1px solid #eee;
+  padding: 16px;           /* Espaciado interior para que el texto no esté pegado */
+  border-bottom: 1px solid #eee; /* Línea fina separadora entre secciones */
 }
 
+/* Quita el borde inferior a la última sección para que quede limpio */
 .modal-section:last-child {
   border-bottom: none;
 }
 
+/* Estilo de los títulos de cada sección */
 .modal-section h3 {
-  margin: 0 0 12px 0;
-  font-size: 16px;
-  color: #333;
-  font-family: 'Dela Gothic One', cursive;
+  margin: 0 0 12px 0;      /* Sin margen arriba, margen abajo para separar del contenido */
+  font-size: 16px;         /* Tamaño de fuente algo más grande para destacar */
+  color: #333;             /* Color gris oscuro para buena legibilidad */
+  font-family: 'Dela Gothic One', cursive; /* Fuente cursiva decorativa para los títulos */
 }
 
+/* Lista sin estilos por defecto (sin viñetas, sin margen ni padding) */
 .modal ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Cada elemento de la lista tiene margen inferior para separación */
 .modal li {
   margin-bottom: 8px;
 }
 
+/* Estilo para enlaces y botones dentro del modal, para que tengan apariencia similar */
 .modal a,
 .modal button {
-  background: none;
-  border: none;
-  color: #575757;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-  padding: 6px 0;
+  background: none;        /* Sin fondo para que sea transparente */
+  border: none;            /* Sin borde para botón limpio */
+  color: #575757;          /* Color gris medio para texto */
+  font-size: 14px;         /* Tamaño de texto legible */
+  cursor: pointer;         /* El cursor cambia para indicar que es interactivo */
+  text-align: left;        /* Texto alineado a la izquierda */
+  width: 100%;             /* Ocupa todo el ancho para que sea fácil de clicar */
+  padding: 6px 0;          /* Espacio vertical para facilitar interacción táctil */
 }
 
+/* Cambia el color al pasar el ratón por encima, para dar feedback visual */
 .modal button:hover,
 .modal a:hover {
-  color: #57baa6;
+  color: #57baa6;          /* Verde azulado suave para destacar el hover, color Golgorio */
 }

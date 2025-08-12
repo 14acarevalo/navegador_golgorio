@@ -3,7 +3,7 @@
 const Clientes = () => (
   <div>
     <h2 style={{ fontFamily: 'Dela Gothic One, cursive', color: '#57baa6' }}>
-      👥 Gestión de Clientes
+       Gestión de Clientes
     </h2>
     <p>Lista de clientes, reservas y historial.</p>
   </div>

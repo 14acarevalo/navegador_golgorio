@@ -1,81 +1,82 @@
-/* App.css - Yo: "Aquí mando yo. Que todo respete su espacio: arriba, abajo, izquierda, derecha." */
-
+/* Establecemos reglas globales para todos los elementos presente en el archivo APP */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Quitamos el margen por defecto que añade el navegador */
+  padding: 0; /* Quitamos el relleno (padding) por defecto */
+  box-sizing: border-box; /* Hacemos que el tamaño incluya bordes y rellenos */
 }
 
+/* Estilo para el elemento principal <body> */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9fb;
-  color: #333;
+  font-family: 'Poppins', sans-serif; /* Fuente de texto principal */
+  background-color: #f9f9fb; /* Color de fondo gris muy claro */
+  color: #333; /* Color del texto gris oscuro */
 }
 
-/* Contenedor principal */
+/* Contenedor general de toda la aplicación */
 .app-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex; /* Usamos flexbox para distribuir el contenido */
+  flex-direction: column; /* Organizamos elementos de arriba a abajo */
 }
 
-/* Header superior: fijo en la parte de arriba */
+/* Barra superior (Header) fija en la parte de arriba */
 .main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background-color: white;
-  border-bottom: 1px solid #e0e0e0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  height: 60px;
+  display: flex; /* Flexbox para alinear el título y el botón */
+  justify-content: space-between; /* Elementos separados en extremos */
+  align-items: center; /* Centrado vertical */
+  padding: 15px 25px; /* Espaciado interno: 15px vertical, 25px horizontal */
+  background-color: white; /* Fondo blanco */
+  border-bottom: 1px solid #e0e0e0; /* Línea gris en la parte inferior */
+  position: fixed; /* Se queda fija aunque hagas scroll */
+  top: 0; /* Pegada al borde superior */
+  left: 0; /* Pegada al borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 100; /* Prioridad para estar por encima de otros elementos */
+  height: 60px; /* Altura fija */
 }
 
+/* Estilo para el título del header */
 .header-title h1 {
-  font-family: 'Dela Gothic One', cursive;
-  font-size: 22px;
-  color: #333;
+  font-family: 'Dela Gothic One', cursive; /* Fuente decorativa */
+  font-size: 22px; /* Tamaño del texto */
+  color: #333; /* Color gris oscuro */
 }
 
-/* Botón de usuario en esquina superior derecha */
+/* Botón circular para el usuario (arriba a la derecha) */
 .user-badge {
-  width: 40px;
-  height: 40px;
-  background-color: #57baa6;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 40px; /* Ancho fijo */
+  height: 40px; /* Alto fijo */
+  background-color: #57baa6; /* Fondo verde azulado */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma redonda */
+  font-weight: 600; /* Texto más grueso */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cursor tipo mano */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Cuerpo de la app: sidebar + contenido */
+/* Contenedor del cuerpo principal de la app */
 .app-body {
-  display: flex;
-  flex: 1;
-  min-height: calc(100vh - 60px);
+  display: flex; /* Flexbox para colocar sidebar y contenido */
+  flex: 1; /* Ocupa todo el espacio posible */
+  min-height: calc(100vh - 60px); /* Altura menos el tamaño del header */
 }
 
-/* Contenido principal - respeta header y sidebar */
+/* Área principal de contenido (a la derecha del sidebar) */
 main.main-content {
-  flex: 1;
-  padding: 30px;
-  margin: 0 0 0 280px; /* Izquierda: sidebar */
-  padding-top: 80px; /* Arriba: espacio para el header */
-  background-color: #f9f9fb;
-  min-height: calc(100vh - 60px);
+  flex: 1; /* Se expande para ocupar el espacio sobrante */
+  padding: 30px; /* Espaciado interno de 30px */
+  margin: 0 0 0 280px; /* Margen izquierdo para dejar espacio al sidebar */
+  padding-top: 80px; /* Más espacio arriba para no tapar el header */
+  background-color: #f9f9fb; /* Fondo gris claro */
+  min-height: calc(100vh - 60px); /* Altura ajustada */
 }
 
-/* Responsive: en móvil, sin sidebar fijo */
+/* Estilos especiales para pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
   main.main-content {
-    margin-left: 0;
-    padding: 20px 20px 20px 20px;
+    margin-left: 0; /* Elimina el espacio para el sidebar */
+    padding: 20px 20px 20px 20px; /* Reduce el espaciado */
   }
 }

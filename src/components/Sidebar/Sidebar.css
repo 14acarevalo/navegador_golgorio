@@ -1,38 +1,43 @@
 /* Sidebar.css - Yo: "El sidebar empieza justo debajo del header, no encima." */
 
+/* Estilo principal del sidebar */
 .sidebar {
-  position: fixed;
-  top: 60px; /* Justo debajo del header */
-  left: 0;
-  width: 200px;
-  height: calc(100vh - 60px);
-  background-color: white;
-  border-right: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  z-index: 900;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  position: fixed;               /* Fija el sidebar en la pantalla aunque se haga scroll */
+  top: 60px;                    /* Se posiciona justo debajo del header que mide 60px */
+  left: 0;                      /* Pegado al borde izquierdo de la ventana */
+  width: 200px;                 /* Ancho fijo del sidebar */
+  height: calc(100vh - 60px);   /* Altura completa de la ventana menos el header (60px) */
+  background-color: white;      /* Fondo blanco */
+  border-right: 1px solid #e0e0e0; /* Línea gris clara a la derecha para delimitar */
+  display: flex;                /* Usamos flexbox para organizar contenido */
+  flex-direction: column;       /* Los hijos se apilan verticalmente */
+  z-index: 900;                 /* Apila el sidebar sobre otros elementos menos importantes */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); /* Sombra sutil para dar profundidad */
 }
 
+/* Contenedor del logo dentro del sidebar */
 .sidebar-logo {
-  text-align: center;
-  padding: 20px 0;
+  text-align: center;           /* Centra horizontalmente el contenido */
+  padding: 20px 0;              /* Espaciado vertical arriba y abajo */
 }
 
+/* Estilo para la imagen del logo */
 .sidebar-logo img {
-  width: 160px;
-  height: auto;
+  width: 160px;                 /* Ancho fijo para el logo */
+  height: auto;                 /* Mantiene la proporción de la imagen */
 }
 
+/* Contenedor del menú del sidebar */
 .sidebar-menu {
-  flex: 1;
-  padding: 10px 0;
+  flex: 1;                     /* Ocupa todo el espacio vertical disponible entre logo y footer */
+  padding: 10px 0;             /* Espaciado arriba y abajo */
 }
 
+/* Estilo del pie del sidebar */
 .sidebar-footer {
-  padding: 15px;
-  text-align: center;
-  font-size: 13px;
-  color: #666;
-  border-top: 1px solid #eee;
+  padding: 15px;               /* Espaciado interno */
+  text-align: center;          /* Texto centrado */
+  font-size: 13px;             /* Tamaño de fuente pequeño */
+  color: #666;                 /* Color gris oscuro */
+  border-top: 1px solid #eee; /* Línea separadora en la parte superior */
 }

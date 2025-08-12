@@ -3,7 +3,7 @@
 const Ajustes = () => (
   <div>
     <h2 style={{ fontFamily: 'Dela Gothic One, cursive', color: '#57baa6' }}>
-      ⚙️ Ajustes
+       Ajustes
     </h2>
     <p>Personaliza tu experiencia en Golgorio.</p>
   </div>
