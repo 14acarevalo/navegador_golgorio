@@ -118,7 +118,8 @@ function App() {
             onClick={() => setIsModalOpen(!isModalOpen)}
             aria-label="Menú de usuario"
           >
-            AT
+             {/* LO IDEAL AQUI SERIA AÑADIR LAS INICIALES DEL NOMBRE Y DEL APELLIDO */}
+            AC
           </button>
         </div>
       </header>

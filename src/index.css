@@ -1,13 +1,33 @@
+/* Estilos globales para todo el cuerpo del documento */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0; /* Elimina el margen por defecto del navegador para que el contenido ocupe todo el ancho y alto disponibles */
+
+  /* Define una pila de fuentes para que el texto se vea bien y coherente en distintos sistemas operativos */
+  font-family: 
+    -apple-system,       /* Fuente nativa de Apple (iOS, macOS) */
+    BlinkMacSystemFont,  /* Fuente del sistema para navegadores basados en Blink en Mac */
+    'Segoe UI',          /* Fuente estándar en Windows */
+    'Roboto',            /* Fuente estándar en Android y Google */
+    'Oxygen',            /* Fuente para Linux KDE */
+    'Ubuntu',            /* Fuente para Ubuntu Linux */
+    'Cantarell',         /* Fuente para GNOME */
+    'Fira Sans',         /* Fuente alternativa */
+    'Droid Sans',        /* Fuente para dispositivos Android */
+    'Helvetica Neue',    /* Fuente muy usada en Mac */
+    sans-serif;          /* Finalmente, cualquier fuente sans-serif disponible */
+
+  -webkit-font-smoothing: antialiased; /* Suaviza la fuente en navegadores basados en WebKit para mejor legibilidad */
+  -moz-osx-font-smoothing: grayscale;  /* Suaviza la fuente en Firefox en macOS usando escala de grises */
 }
 
+/* Estilos para los elementos <code>, que muestran código */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* Define una pila de fuentes monospace (ancho fijo) para que el código se vea uniforme */
+  font-family: 
+    source-code-pro,  /* Fuente para código moderna de Adobe */
+    Menlo,           /* Fuente monospace en Mac */
+    Monaco,          /* Otra fuente monospace para Mac */
+    Consolas,        /* Fuente monospace para Windows */
+    'Courier New',   /* Fuente monospace clásica */
+    monospace;       /* Finalmente cualquier fuente monospace disponible */
 }
